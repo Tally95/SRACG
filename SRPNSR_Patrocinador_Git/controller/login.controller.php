@@ -40,7 +40,7 @@ class LoginController {
             $_SESSION['Expiracion'] = time() + 1;
             $_SESSION['Logged'] = 'true';
 
-            echo '<script>alert("Bienvenido ' . $_SESSION['email'] . '")</script> ';
+//            echo '<script>alert("Bienvenido ' . $_SESSION['email'] . '")</script> ';
             echo "<script>location.href='?c=administracionDeReservaciones'</script>";
 //             echo "id de usuario:".$_SESSION['email'];
 //            header("Location: index.php");
