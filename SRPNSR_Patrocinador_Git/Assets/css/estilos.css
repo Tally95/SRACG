@@ -1,0 +1,109 @@
+body{
+    margin: auto; 
+    float: none;
+    width: 960px;
+}
+
+.col_1{    
+    width: 200px; 
+    float: left;
+}
+
+.col_2{
+    width: 560px;
+    color: #81994d;
+    float: left;
+}
+
+.col_3{  
+    width: 200px; 
+    float: left;    
+}
+
+.imgSinac,.imgAcg {
+    padding: 10%;
+} 
+
+.fila_1{    
+    background: lightgray;  
+    height: 150px;
+    float: top;
+}
+
+.fila_2{
+    background: #81994d;
+    height: 10px;
+    float: top;
+}
+
+.fila_3{
+    background: #543d2c;
+    height: 20px;
+    float: top;
+}
+
+.fila_4{
+    background: linear-gradient(to bottom, lightgray 0%, #81994d 100%);
+    height: 355px;
+    float: top;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.cajaRegistro{
+    background: #543d2c;
+    width: 600px;
+    height: 300px;
+    margin: auto;    
+}
+
+.botonesRegistro{
+    padding: 10px;
+}
+
+.btn {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 60px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.azulO {background-color: #2698db;} /* Green */
+.azulC {background-color: #45c7eb;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.pie{
+    background: #543d2c;
+    padding: 0.1px;
+    height: 130px;
+}
+
+.col_1f, .col_2f, .col_3f{
+    float: left;
+    padding-left: 30px;
+}
+
+.cajaRegistro2{
+    background: #543d2c;
+    width: 450px;
+    height: 315px;
+    margin: auto; 
+    border-radius: 0.2em;
+}
+.form-group1{
+  padding: 5px;
+  
+    
+}
+
+.input{
+  background: none;
+  width: 385px; 
+  height: 25px;
+  border-radius: 0.4em;
+  border: 1px #ffffff solid;
+}
+
+.botonesIngresar{
+    margin: 20px;
+}
