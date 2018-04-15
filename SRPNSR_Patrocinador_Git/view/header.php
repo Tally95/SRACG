@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Registro</title>
+        <title>Patrocinador</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="Assets/css/estiloPatrocinador.css">
     </head>
