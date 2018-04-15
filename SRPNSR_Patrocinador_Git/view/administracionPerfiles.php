@@ -23,8 +23,8 @@
      <hr/>
      
      <div class="cuerpo1Perfiles" style="text-align: center;">
-         <a href='?c=agregarPerfiles'><button class="botonesPerfiles">AGREGAR</button></a>
-         <a href='?c=editarPerfiles'><button class="botonesPerfiles">EDITAR</button></a>
+         <a href='?c=administracionPerfiles&a=IndexAgregar'><button class="botonesPerfiles">AGREGAR</button></a>
+         <a href='?c=administracionPerfiles&a=IndexEditar'><button class="botonesPerfiles">EDITAR</button></a>
          <button class="botonesPerfiles">ELIMINAR</button>
      </div>
      <br><br>
