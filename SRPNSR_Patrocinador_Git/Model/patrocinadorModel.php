@@ -1,12 +1,15 @@
 <?php
-
+require 'database.php';
 class Patrocinador {
 
     private $pdo;
+    
     public $idPatrocinador;
-    public $email;
+    public $nombre;
+    public $correo;
     public $clave;
     public $tipo;
+    public $telefono;
 
     public function __CONSTRUCT() {
         try {
@@ -15,7 +18,53 @@ class Patrocinador {
             die($e->getMessage());
         }
     }
+    
+    public function Registrar($data) {
 
+        try {
+            $sql = "INSERT INTO patrocinador (idPatrocinador,nombre,correo,clave,tipo,telefono) 
+		        VALUES (?, ?, ?, ?, ?, ?)";
+
+            $this->pdo->prepare($sql)
+                    ->execute(
+                            array(
+                                $data->idPatrocinador,
+                                $data->nombre,
+                                $data->correo,
+                                $data->clave,
+                                $data->tipo,
+                                $data->telefono
+                            )
+            );
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
+    public function Eliminar($id) {
+        try {
+            $stm = $this->pdo
+                    ->prepare("DELETE FROM patrocinador WHERE idPatrocinador = ?");
+
+            $stm->execute(array($id));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function Obtener($id) {
+        try {
+            $stm = $this->pdo
+                    ->prepare("SELECT * FROM patrocinador WHERE idPatrocinador = ?");
+
+
+            $stm->execute(array($id));
+            return $stm->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
     public function ValidarUsuario($email, $contrasena) {
         try {
 
@@ -26,6 +75,19 @@ class Patrocinador {
             $stm->execute(array($email, $contrasena));
 
             return $stm->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
+    public function Listar() {
+        try {
+            $result = array();
+
+            $stm = $this->pdo->prepare("SELECT * FROM patrocinador");
+            $stm->execute();
+
+            return $stm->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
         }

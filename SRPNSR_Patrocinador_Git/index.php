@@ -20,3 +20,10 @@ if (!isset($_REQUEST['c'])) {
     // Llama la accion
     call_user_func(array($controller, $accion));
 }
+
+
+if (isset($_SESSION['username'])) {
+    
+} else {
+    
+}
